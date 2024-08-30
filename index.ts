@@ -10,7 +10,7 @@ const port = 3000
 
 
 app.get('/', (req, res) => {
-    res.json({ message: 'Hello, world!'})
+    res.json({ message: `Server is running on http://localhost:${port}`})
 })
 
 //upload
@@ -86,3 +86,5 @@ app.get('/temp/:id', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`)
 })
+
+export { app }
